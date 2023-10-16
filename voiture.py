@@ -21,10 +21,7 @@ class voiture:
         vérifie si la voiture est neuve
         :return: True ou False
         """
-        if self.km==0:
-            return True
-        else:
-            return False
+        return self.km == 0
 
     def changerCouleur(self, color):
         """

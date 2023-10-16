@@ -88,3 +88,20 @@ class Train:
     def __str__(self):
         "Conversion en string"
         return self.__repr__()
+
+
+# Tests
+train = Train()
+w1 = Wagon("blé")
+train.ajoute_wagon(w1)
+w2 = Wagon("riz")
+train.ajoute_wagon(w2)
+train.ajoute_wagon(Wagon("sable"))
+assert str(train) == 'Locomotive - Wagon de blé - Wagon de riz - Wagon de sable'
+assert not train.est_vide()
+assert train.donne_nb_wagons() == 3
+assert train.transporte_du('blé')
+assert not train.transporte_du('matériel')
+assert train.supprime_wagon_de('riz')
+assert str(train) == 'Locomotive - Wagon de blé - Wagon de sable'
+assert not train.supprime_wagon_de('riz')

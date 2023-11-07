@@ -80,7 +80,7 @@ assert v1.y == 10
 v3 = Vecteur2D(2, 3)
 assert v1.ProduitScalaire(v3) == 44
 
-# Test d'orthogonalité
+# Test de perpendicularité
 v4 = Vecteur2D(4, -3)
 assert v1.EstPerpendiculaire(v4) == False
 
@@ -97,6 +97,3 @@ assert v6.y == 30
 v7 = (v1 + v2)
 assert v7.x == 22
 assert v7.y == 32
-
-
-

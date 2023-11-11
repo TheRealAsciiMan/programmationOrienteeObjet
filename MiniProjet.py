@@ -45,7 +45,7 @@ class Vecteur2D:
         Returns:
             Vecteur2D: Un nouveau vecteur résultant de l'addition.
         """
-        assert isinstance(vect, Vecteur2D), "L'argument doit être un Vecteur2D"
+        assert isinstance(vect, Vecteur2D), "L'argument vect doit être un Vecteur2D"
         self.x += vect.x
         self.y += vect.y
         return Vecteur2D(self.x, self.y)
@@ -59,7 +59,7 @@ class Vecteur2D:
         Returns:
             float: Le produit scalaire des deux vecteurs.
         """
-        assert isinstance(vect, Vecteur2D), "L'argument doit être un Vecteur2D"
+        assert isinstance(vect, Vecteur2D), "L'argument vect doit être un Vecteur2D"
         return self.x * vect.x + self.y * vect.y
 
     def EstPerpendiculaire(self, vect):
@@ -71,7 +71,7 @@ class Vecteur2D:
         Returns:
             bool: True si les vecteurs sont perpendiculaires, sinon False.
         """
-        assert isinstance(vect, Vecteur2D), "L'argument doit être un Vecteur2D"
+        assert isinstance(vect, Vecteur2D), "L'argument vect doit être un Vecteur2D"
         if self.ProduitScalaire(vect) == 0:
             return True
         else:
@@ -86,7 +86,7 @@ class Vecteur2D:
         Returns:
             bool: True si les vecteurs sont colinéaires, sinon False.
         """
-        assert isinstance(vect, Vecteur2D), "L'argument doit être un Vecteur2D"
+        assert isinstance(vect, Vecteur2D), "L'argument vect doit être un Vecteur2D"
         if self.x * vect.y - vect.x * self.y == 0:
             return True
         else:
